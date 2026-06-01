@@ -34,10 +34,17 @@ import { serviceCategories } from "../data/site.js";
               </div>
               <div class="grid gap-3 p-6">
                 {category.items.map((item) => (
-                  <div class="flex items-center justify-between gap-4 rounded-2xl border border-teal/12 bg-ink/55 px-4 py-3">
-                    <span class="font-semibold text-white/82">{item}</span>
-                    <span class="code-font rounded-full bg-teal/10 px-3 py-1 text-xs font-bold text-teal">activo</span>
-                  </div>
+                  <details class="group rounded-2xl border border-teal/12 bg-ink/55 px-4 py-3 transition hover:border-teal/35">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 [&::-webkit-details-marker]:hidden">
+                      <span class="font-semibold text-white/82">{item.name}</span>
+                      <span class="code-font rounded-full bg-teal/10 px-3 py-1 text-xs font-bold text-teal transition group-open:bg-teal group-open:text-ink">
+                        ver
+                      </span>
+                    </summary>
+                    <p class="mt-4 border-t border-teal/12 pt-4 leading-7 text-white/62">
+                      {item.detail}
+                    </p>
+                  </details>
                 ))}
               </div>
             </article>

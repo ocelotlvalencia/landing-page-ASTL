@@ -77,25 +77,77 @@ export const serviceCategories = [
     icon: MonitorCog,
     title: "Operación del negocio",
     summary: "Herramientas para vender, controlar inventario y ordenar procesos internos.",
-    items: ["Punto de venta", "Inventarios digitales", "Digitalización de procesos"]
+    items: [
+      {
+        name: "Punto de venta",
+        detail: "Es un sistema para registrar ventas, productos y movimientos del negocio. Ayuda a vender más ordenado, consultar lo vendido y tener mejor control del día a día."
+      },
+      {
+        name: "Inventarios digitales",
+        detail: "Sirve para llevar el control de productos, entradas, salidas y existencias desde una herramienta digital, evitando depender solo de libretas o archivos desordenados."
+      },
+      {
+        name: "Digitalización de procesos",
+        detail: "Consiste en pasar tareas manuales a herramientas digitales. Por ejemplo: registros, listas, reportes, controles de pedidos o formatos internos."
+      }
+    ]
   },
   {
     icon: Globe2,
     title: "Presencia y herramientas digitales",
     summary: "Soluciones para mostrar tu negocio en línea y crear herramientas sencillas.",
-    items: ["Página web", "Apps sencillas para negocios", "Herramientas de trabajo"]
+    items: [
+      {
+        name: "Página web",
+        detail: "Es un sitio para presentar tu negocio, servicios, productos, horarios y formas de contacto. Ayuda a que las personas te encuentren y conozcan lo que ofreces."
+      },
+      {
+        name: "Apps sencillas para negocios",
+        detail: "Son sistemas pequeños para resolver una necesidad específica, como registrar clientes, citas, pedidos, gastos, entregas o reportes básicos."
+      },
+      {
+        name: "Herramientas de trabajo",
+        detail: "Incluye instalación y configuración de programas necesarios para trabajar, como correo, Office, lectores PDF, navegadores, antivirus, impresoras o accesos remotos."
+      }
+    ]
   },
   {
     icon: Wrench,
     title: "Soporte y mantenimiento",
     summary: "Atención técnica para mantener equipos estables, configurados y listos.",
-    items: ["Mantenimiento de computadoras", "Soporte técnico remoto", "Formateo y optimización", "Instalación de software"]
+    items: [
+      {
+        name: "Mantenimiento de computadoras",
+        detail: "Revisión del equipo para detectar fallas, lentitud, errores o problemas comunes. La idea es mantener la computadora estable para trabajar mejor."
+      },
+      {
+        name: "Soporte técnico remoto",
+        detail: "Ayuda técnica a distancia para resolver dudas, configurar programas o revisar problemas sin que tengas que trasladar el equipo."
+      },
+      {
+        name: "Formateo y optimización",
+        detail: "Limpieza o reinstalación del sistema cuando el equipo está muy lento, tiene errores o necesita empezar de nuevo con una configuración más ordenada."
+      },
+      {
+        name: "Instalación de software",
+        detail: "Instalación y ajuste de programas que necesita el negocio para operar, trabajar, administrar información o comunicarse mejor."
+      }
+    ]
   },
   {
     icon: DatabaseBackup,
     title: "Seguridad y asesoría",
     summary: "Acompañamiento para cuidar información y tomar mejores decisiones tecnológicas.",
-    items: ["Respaldos de información", "Asesoría tecnológica"]
+    items: [
+      {
+        name: "Respaldos de información",
+        detail: "Copias de seguridad de archivos importantes para reducir el riesgo de perder información por fallas, errores, robo, virus o daño del equipo."
+      },
+      {
+        name: "Asesoría tecnológica",
+        detail: "Orientación para elegir qué herramienta, equipo, sistema o solución conviene usar según las necesidades y presupuesto del negocio."
+      }
+    ]
   }
 ];
 
