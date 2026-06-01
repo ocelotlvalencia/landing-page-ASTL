@@ -78,9 +78,9 @@ const runCodeAnimation = () => {
 gsap.delayedCall(0.65, runCodeAnimation);
 
 gsap.utils.toArray(".reveal").forEach((element) => {
-  gsap.to(element, {
-    opacity: 1,
-    y: 0,
+  gsap.from(element, {
+    opacity: 0,
+    y: 24,
     duration: 0.75,
     ease: "power3.out",
     scrollTrigger: {

@@ -29,8 +29,8 @@ body {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .tech-grid {
