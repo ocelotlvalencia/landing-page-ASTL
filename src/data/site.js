@@ -77,7 +77,7 @@ export const serviceCategories = [
     icon: MonitorCog,
     title: "Operación del negocio",
     summary: "Herramientas para vender, controlar inventario y ordenar procesos internos.",
-    items: ["Punto de venta a la medida", "Inventarios digitales", "Digitalización de procesos"]
+    items: ["Punto de venta", "Inventarios digitales", "Digitalización de procesos"]
   },
   {
     icon: Globe2,
