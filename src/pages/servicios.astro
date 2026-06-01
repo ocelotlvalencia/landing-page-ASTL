@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { serviceCategories } from "../data/site.js";
+---
+
+<BaseLayout title="Servicios | ASTL Technology Consulting">
+  <SiteHeader />
+  <main class="min-h-screen bg-ink pt-28 text-white">
+    <section class="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-20">
+      <div class="reveal max-w-3xl">
+        <p class="code-font text-sm font-bold uppercase tracking-[0.2em] text-ember">technology.layers</p>
+        <h1 class="mt-4 text-4xl font-extrabold tracking-normal md:text-6xl">Servicios organizados por necesidad.</h1>
+        <p class="mt-5 text-lg leading-8 text-white/62">
+          Agrupamos los servicios en áreas claras para que sea más fácil identificar qué necesita tu negocio.
+        </p>
+      </div>
+      <div class="mt-12 grid gap-5 md:grid-cols-2">
+        {serviceCategories.map((category, index) => {
+          const Icon = category.icon;
+          return (
+            <article class="reveal group overflow-hidden rounded-[1.75rem] border border-teal/16 bg-white/[0.04] shadow-soft transition hover:-translate-y-1 hover:border-teal/45">
+              <div class="border-b border-teal/12 bg-teal/6 p-6">
+                <div class="flex items-start justify-between gap-5">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl border border-teal/25 bg-ink text-teal transition group-hover:bg-teal group-hover:text-ink">
+                    <Icon size={24} aria-hidden="true" />
+                  </div>
+                  <span class="code-font rounded-full border border-teal/20 bg-ink/70 px-3 py-1 text-xs font-bold text-teal">layer_0{index + 1}</span>
+                </div>
+                <h2 class="mt-6 text-2xl font-extrabold text-white">{category.title}</h2>
+                <p class="mt-3 leading-7 text-white/62">{category.summary}</p>
+              </div>
+              <div class="grid gap-3 p-6">
+                {category.items.map((item) => (
+                  <div class="flex items-center justify-between gap-4 rounded-2xl border border-teal/12 bg-ink/55 px-4 py-3">
+                    <span class="font-semibold text-white/82">{item}</span>
+                    <span class="code-font rounded-full bg-teal/10 px-3 py-1 text-xs font-bold text-teal">activo</span>
+                  </div>
+                ))}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  </main>
+  <FloatingWhatsApp />
+  <SiteFooter />
+</BaseLayout>

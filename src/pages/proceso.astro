@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { businessTypes, processSteps } from "../data/site.js";
+---
+
+<BaseLayout title="Proceso | ASTL Technology Consulting">
+  <SiteHeader />
+  <main class="min-h-screen bg-ink pt-28 text-white">
+    <section class="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-20">
+      <div class="grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
+        <div class="reveal">
+          <p class="code-font text-sm font-bold uppercase tracking-[0.2em] text-teal">workflow.run()</p>
+          <h1 class="mt-4 text-4xl font-extrabold tracking-normal md:text-6xl">De la idea al servicio funcionando.</h1>
+        </div>
+        <div class="space-y-5">
+          {processSteps.map((step, index) => (
+            <div class="reveal rounded-[1.5rem] border border-teal/16 bg-ink/65 p-6 shadow-soft">
+              <span class="code-font text-sm font-extrabold text-teal">step_0{index + 1}</span>
+              <p class="mt-3 text-xl font-semibold leading-8 text-white/82">{step}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="reveal mt-16">
+        <p class="code-font text-sm font-bold uppercase tracking-[0.2em] text-ember">business.targets</p>
+        <h2 class="mt-4 text-3xl font-extrabold md:text-5xl">Tecnología pensada para negocios reales.</h2>
+      </div>
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+        {businessTypes.map(([title, text], index) => (
+          <article class="reveal rounded-[1.5rem] border border-teal/16 bg-white/[0.04] p-6 shadow-soft">
+            <span class="code-font text-sm font-bold text-teal">target_0{index + 1}</span>
+            <h3 class="mt-4 text-2xl font-extrabold">{title}</h3>
+            <p class="mt-3 leading-7 text-white/62">{text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+  <FloatingWhatsApp />
+  <SiteFooter />
+</BaseLayout>

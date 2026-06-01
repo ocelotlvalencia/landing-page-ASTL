@@ -1,0 +1,45 @@
+---
+import { ArrowRight, Menu } from "@lucide/astro";
+
+const navItems = [
+  ["/servicios", "./servicios"],
+  ["/paquetes", "./paquetes"],
+  ["/proyectos", "./proyectos"],
+  ["/proceso", "./proceso"],
+  ["/faq", "./faq"],
+  ["/contacto", "./contacto"]
+];
+---
+
+<header class="fixed inset-x-0 top-0 z-50 border-b border-teal/20 bg-ink/78 text-white backdrop-blur-xl">
+  <nav class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
+    <a href="/" class="flex items-center gap-3" aria-label="ASTL Technology Consulting">
+      <img src="/images/astl-logo.png" alt="ASTL Technology Consulting" class="h-12 w-auto object-contain" />
+    </a>
+    <div class="code-font hidden items-center gap-2 rounded-full border border-teal/20 bg-white/5 p-1 text-sm font-semibold text-graphite shadow-soft lg:flex">
+      {navItems.map(([href, label]) => (
+        <a class="rounded-full px-4 py-2 transition hover:bg-teal/12 hover:text-teal" href={href}>{label}</a>
+      ))}
+    </div>
+    <a
+      href="/contacto"
+      class="code-font hidden items-center gap-2 rounded-full border border-teal/35 bg-teal/10 px-5 py-3 text-sm font-bold text-teal shadow-soft transition hover:bg-teal hover:text-ink lg:inline-flex"
+    >
+      iniciar consulta
+      <ArrowRight size={16} aria-hidden="true" />
+    </a>
+    <details class="relative lg:hidden">
+      <summary class="inline-flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-teal/25 bg-white/5 text-teal [&::-webkit-details-marker]:hidden" aria-label="Abrir menú">
+        <Menu size={20} />
+      </summary>
+      <div class="code-font absolute right-0 top-14 w-64 rounded-[1.25rem] border border-teal/20 bg-ink/95 p-3 text-sm font-bold text-white shadow-soft backdrop-blur-xl">
+        <div class="grid gap-2">
+          {navItems.map(([href, label]) => (
+            <a class="rounded-2xl px-4 py-3 transition hover:bg-teal/12 hover:text-teal" href={href}>{label}</a>
+          ))}
+          <a class="rounded-2xl bg-teal px-4 py-3 text-ink transition hover:bg-brass" href="/contacto">iniciar consulta</a>
+        </div>
+      </div>
+    </details>
+  </nav>
+</header>

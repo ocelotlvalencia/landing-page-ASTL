@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { faqs } from "../data/site.js";
+---
+
+<BaseLayout title="FAQ | ASTL Technology Consulting">
+  <SiteHeader />
+  <main class="min-h-screen bg-ink pt-28 text-white">
+    <section class="mx-auto grid max-w-7xl gap-12 px-5 py-12 md:grid-cols-[0.75fr_1.25fr] md:px-8 md:py-20">
+      <div class="reveal">
+        <p class="code-font text-sm font-bold uppercase tracking-[0.2em] text-ember">faq.query()</p>
+        <h1 class="mt-4 text-4xl font-extrabold tracking-normal md:text-6xl">Preguntas frecuentes antes de iniciar.</h1>
+        <p class="mt-5 text-lg leading-8 text-white/62">Respuestas rápidas para entender cómo puede empezar el trabajo con ASTL.</p>
+      </div>
+      <div class="space-y-4">
+        {faqs.map(([question, answer]) => (
+          <details class="reveal group rounded-[1.35rem] border border-teal/16 bg-white/[0.04] p-5 shadow-soft">
+            <summary class="code-font flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-white [&::-webkit-details-marker]:hidden">
+              <span>{question}</span>
+              <span class="text-teal transition group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-4 leading-7 text-white/62">{answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </main>
+  <FloatingWhatsApp />
+  <SiteFooter />
+</BaseLayout>
