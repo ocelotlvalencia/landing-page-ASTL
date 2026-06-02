@@ -15,45 +15,45 @@ import { metrics, terminalLines } from "../data/site.js";
   <main id="inicio" class="bg-ink">
     <section class="tech-grid terminal-scan relative min-h-screen overflow-hidden text-white">
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(0,255,156,0.18),transparent_32%),radial-gradient(circle_at_78%_18%,rgba(0,212,255,0.16),transparent_30%),linear-gradient(180deg,rgba(5,7,12,0.72)_0%,#05070c_88%)]"></div>
-      <div class="relative mx-auto grid min-h-screen max-w-7xl items-center gap-10 px-5 pb-16 pt-36 md:grid-cols-[0.92fr_1.08fr] md:px-8 md:pt-32">
-        <div class="hero-copy min-w-0 max-w-3xl">
+      <div class="relative mx-auto grid min-h-screen max-w-7xl items-center gap-8 px-5 pb-12 pt-28 md:grid-cols-[1.04fr_0.96fr] md:px-8 md:pt-24 lg:gap-12">
+        <div class="hero-copy min-w-0 max-w-2xl">
           <p class="code-font translate-y-5 break-words text-xs font-bold uppercase tracking-[0.16em] text-teal opacity-0 sm:text-sm sm:tracking-[0.22em]">ASTL://consultoría_tecnológica</p>
-          <h1 class="neon-text mt-5 translate-y-5 text-4xl font-extrabold leading-[1.05] tracking-normal opacity-0 sm:text-5xl md:text-7xl">
+          <h1 class="neon-text mt-4 translate-y-5 text-4xl font-extrabold leading-[1.04] tracking-normal opacity-0 sm:text-5xl md:text-6xl xl:text-7xl">
             Soluciones digitales con mentalidad de terminal.
           </h1>
-          <p class="mt-6 max-w-2xl translate-y-5 text-lg leading-8 text-white/72 opacity-0 md:text-xl">
+          <p class="mt-5 max-w-xl translate-y-5 text-base leading-7 text-white/72 opacity-0 md:text-lg md:leading-8">
             En ASTL Technology Consulting diseñamos, configuramos y damos soporte a tecnología para negocios que necesitan vender mejor, ordenar procesos y proteger su información.
           </p>
-          <div class="mt-9 flex translate-y-5 flex-col gap-3 opacity-0 sm:flex-row">
-            <a href="/contacto" class="code-font inline-flex items-center justify-center gap-2 rounded-full bg-teal px-7 py-4 font-bold text-ink shadow-soft transition hover:bg-brass">
+          <div class="mt-7 flex translate-y-5 flex-col gap-3 opacity-0 sm:flex-row">
+            <a href="/contacto" class="code-font inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3.5 text-sm font-bold text-ink shadow-soft transition hover:bg-brass">
               ejecutar diagnóstico
               <ArrowRight size={18} aria-hidden="true" />
             </a>
-            <a href="/servicios" class="code-font inline-flex items-center justify-center rounded-full border border-teal/35 bg-white/5 px-7 py-4 font-bold text-teal transition hover:bg-teal/10">
+            <a href="/servicios" class="code-font inline-flex items-center justify-center rounded-full border border-teal/35 bg-white/5 px-6 py-3.5 text-sm font-bold text-teal transition hover:bg-teal/10">
               ver servicios
             </a>
           </div>
         </div>
 
-        <div class="hero-visual mx-auto w-full min-w-0 max-w-[520px] translate-y-5 opacity-0">
+        <div class="hero-visual mx-auto w-full min-w-0 max-w-[440px] translate-y-5 opacity-0 md:justify-self-end">
           <div class="glass-panel overflow-hidden rounded-[1.5rem]">
-            <div class="flex items-center gap-2 border-b border-teal/20 bg-white/5 px-4 py-3">
-              <span class="h-2.5 w-2.5 rounded-full bg-[#ff5f57]"></span>
-              <span class="h-2.5 w-2.5 rounded-full bg-[#febc2e]"></span>
-              <span class="h-2.5 w-2.5 rounded-full bg-teal"></span>
-              <span class="code-font ml-3 inline-flex items-center gap-2 text-sm font-bold text-white/55">
-                <Terminal size={14} aria-hidden="true" />
+            <div class="flex items-center gap-2 border-b border-teal/20 bg-white/5 px-3 py-2.5">
+              <span class="h-2 w-2 rounded-full bg-[#ff5f57]"></span>
+              <span class="h-2 w-2 rounded-full bg-[#febc2e]"></span>
+              <span class="h-2 w-2 rounded-full bg-teal"></span>
+              <span class="code-font ml-2 inline-flex items-center gap-1.5 text-xs font-bold text-white/55">
+                <Terminal size={12} aria-hidden="true" />
                 astl-terminal.exe
               </span>
             </div>
-            <div class="code-font p-4 text-[0.68rem] leading-6 text-white/78 sm:text-xs md:p-5 md:text-sm md:leading-7">
-              <div class="mb-4 rounded-xl border border-ember/20 bg-ember/5 px-3 py-2">
-                <div class="flex items-center justify-between text-xs uppercase tracking-[0.18em] text-ember">
+            <div class="code-font p-3 text-[0.66rem] leading-5 text-white/78 sm:text-[0.7rem] md:p-4 md:text-xs md:leading-6">
+              <div class="mb-3 rounded-xl border border-ember/20 bg-ember/5 px-3 py-2">
+                <div class="flex items-center justify-between text-[0.62rem] uppercase tracking-[0.14em] text-ember">
                   <span>developing_service.ts</span>
                   <span>compiling</span>
                 </div>
               </div>
-              <div class="min-h-40 overflow-hidden rounded-xl border border-teal/14 bg-black/28 p-4">
+              <div class="min-h-32 overflow-hidden rounded-xl border border-teal/14 bg-black/28 p-3">
                 {terminalLines.map((line) => (
                   <p class="code-line break-all text-white/72" data-code-text={line}>
                     <span class="code-output"></span>
@@ -61,9 +61,9 @@ import { metrics, terminalLines } from "../data/site.js";
                 ))}
                 <p class="typing-cursor text-teal" aria-hidden="true">_</p>
               </div>
-              <div class="code-modules mt-4 grid gap-2 opacity-0">
+              <div class="code-modules mt-3 grid gap-2 opacity-0">
                 {["pos.system", "web.deploy", "backup.secure", "support.remote"].map((item) => (
-                  <div class="flex items-center justify-between rounded-xl border border-teal/16 bg-teal/6 px-3 py-2">
+                  <div class="flex items-center justify-between rounded-xl border border-teal/16 bg-teal/6 px-3 py-1.5">
                     <span class="text-white/82">{item}</span>
                     <span class="text-teal">online</span>
                   </div>
