@@ -1,5 +1,5 @@
 ---
-import { CheckCircle2, Sparkles } from "@lucide/astro";
+import { CheckCircle2, Mail, Sparkles } from "@lucide/astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 import SiteFooter from "../components/SiteFooter.astro";
@@ -33,13 +33,7 @@ import { contactLinks } from "../data/site.js";
             WhatsApp
           </a>
           <a href={contactLinks.email} class="code-font inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-teal/25 bg-white/[0.04] px-6 py-4 font-bold text-teal transition hover:bg-teal/10">
-            <svg class="h-5 w-5 shrink-0 overflow-visible" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="#EA4335" d="M4.5 19.5h3V10.7L3 7.32V18a1.5 1.5 0 0 0 1.5 1.5Z"></path>
-              <path fill="#34A853" d="M16.5 19.5h3A1.5 1.5 0 0 0 21 18V7.32l-4.5 3.38v8.8Z"></path>
-              <path fill="#FBBC04" d="M16.5 7.2v3.5L21 7.32V6a1.5 1.5 0 0 0-2.4-1.2l-2.1 1.58v.82Z"></path>
-              <path fill="#4285F4" d="M7.5 10.7V7.2l4.5 3.38 4.5-3.38v3.5L12 14.08 7.5 10.7Z"></path>
-              <path fill="#C5221F" d="M3 6v1.32l4.5 3.38V7.2l-2.1-1.58A1.5 1.5 0 0 0 3 6Z"></path>
-            </svg>
+            <Mail class="h-5 w-5 shrink-0" aria-hidden="true" />
             Correo
           </a>
           <a href={contactLinks.facebook} target="_blank" rel="noopener noreferrer" class="code-font inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-teal/25 bg-white/[0.04] px-6 py-4 font-bold text-teal transition hover:bg-teal/10">
