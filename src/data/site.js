@@ -193,10 +193,31 @@ export const packages = [
   }
 ];
 
-export const projects = [
-  ["case_01", "Punto de venta a la medida para paletería", "Sistema desarrollado para apoyar la operación de venta, registro y control del negocio."],
-  ["case_02", "Página web para paletería", "Sitio web creado para presentar el negocio, sus productos y sus canales de contacto."]
+export const clients = [
+  {
+    code: "client_01",
+    name: "Paletería Nopalucna",
+    slug: "paleteria-nopalucna",
+    href: "/proyectos/paleteria-nopalucna/",
+    summary: "Cliente con soluciones digitales para operación de ventas y presencia web.",
+    projects: [
+      {
+        code: "case_01",
+        title: "Punto de venta a la medida",
+        text: "Sistema desarrollado para apoyar la operación de venta, registro y control del negocio."
+      },
+      {
+        code: "case_02",
+        title: "Página web",
+        text: "Sitio web creado para presentar el negocio, sus productos y sus canales de contacto."
+      }
+    ]
+  }
 ];
+
+export const projects = clients.flatMap((client) =>
+  client.projects.map((project) => [project.code, `${project.title} para ${client.name}`, project.text])
+);
 
 export const processSteps = [
   "Escuchamos cómo trabaja tu negocio y detectamos qué puede resolverse con tecnología.",

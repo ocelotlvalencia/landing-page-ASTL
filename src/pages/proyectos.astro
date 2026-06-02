@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
-import { projects } from "../data/site.js";
+import { clients } from "../data/site.js";
 ---
 
 <BaseLayout title="Proyectos | ASTL Technology Consulting">
@@ -20,13 +20,23 @@ import { projects } from "../data/site.js";
         </p>
       </div>
       <div class="mt-12 grid gap-5 md:grid-cols-2">
-        {projects.map(([code, title, text]) => (
-          <article class="reveal rounded-[1.75rem] border border-teal/16 bg-ink/65 p-7 shadow-soft">
-            <div class="code-font inline-flex rounded-full border border-teal/20 bg-teal/8 px-3 py-1 text-xs font-bold text-teal">{code}</div>
-            <h2 class="mt-6 text-2xl font-extrabold">{title}</h2>
-            <p class="mt-3 leading-7 text-white/62">{text}</p>
-            <p class="code-font mt-6 text-sm text-brass">status: entregado</p>
-          </article>
+        {clients.map((client) => (
+          <a
+            href={client.href}
+            class="reveal group block rounded-[1.75rem] border border-teal/16 bg-ink/65 p-7 shadow-soft transition hover:-translate-y-1 hover:border-teal/45"
+          >
+            <div class="flex items-start justify-between gap-5">
+              <div class="code-font inline-flex rounded-full border border-teal/20 bg-teal/8 px-3 py-1 text-xs font-bold text-teal">
+                {client.code}
+              </div>
+              <span class="code-font rounded-full bg-brass/10 px-3 py-1 text-xs font-bold text-brass">
+                {client.projects.length} proyectos
+              </span>
+            </div>
+            <h2 class="mt-6 text-2xl font-extrabold transition group-hover:text-teal">{client.name}</h2>
+            <p class="mt-3 leading-7 text-white/62">{client.summary}</p>
+            <p class="code-font mt-6 text-sm text-brass">abrir carpeta del cliente</p>
+          </a>
         ))}
       </div>
     </section>
