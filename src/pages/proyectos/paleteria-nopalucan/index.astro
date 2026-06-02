@@ -9,7 +9,7 @@ import productosTicket from "./assets-pv/Punto de Venta-PN.png";
 
 const client = clients.find((item) => item.slug === "paleteria-nopalucan");
 const pvScreens = [
-  [productosTicket, "Productos y ticket"]
+  [productosTicket, "Punto de Venta PN"]
 ];
 const previewPvScreens = pvScreens.length > 1 ? [...pvScreens, ...pvScreens] : pvScreens;
 const pvStatusLabel = pvScreens.length === 1 ? "1 vista" : `${pvScreens.length} vistas`;
