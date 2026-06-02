@@ -6,18 +6,10 @@ import SiteHeader from "../../../components/SiteHeader.astro";
 import { clients } from "../../../data/site.js";
 import logoPaleteria from "./logo-paleteria.png";
 import productosTicket from "./assets-pv/01-productos-ticket.png";
-import materiaPrima from "./assets-pv/03-materia-prima.png";
-import clientes from "./assets-pv/05-clientes.png";
-import pedidos from "./assets-pv/07-pedidos.png";
-import ventas from "./assets-pv/09-ventas.png";
 
 const client = clients.find((item) => item.slug === "paleteria-nopalucan");
 const pvScreens = [
-  [productosTicket, "Productos y ticket"],
-  [materiaPrima, "Materia prima"],
-  [clientes, "Clientes"],
-  [pedidos, "Pedidos"],
-  [ventas, "Ventas"]
+  [productosTicket, "Productos y ticket"]
 ];
 ---
 
@@ -59,7 +51,7 @@ const pvScreens = [
             </div>
             <h2 class="mt-5 text-2xl font-extrabold">Punto de venta a la medida</h2>
             <p class="mt-3 leading-7 text-white/62">
-              Vista rápida de productos, materia prima, clientes, pedidos y ventas.
+              Vista rápida del flujo de venta con productos y ticket.
             </p>
           </div>
 
