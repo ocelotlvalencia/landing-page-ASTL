@@ -196,9 +196,9 @@ export const packages = [
 export const clients = [
   {
     code: "client_01",
-    name: "Paletería Nopalucna",
-    slug: "paleteria-nopalucna",
-    href: "/proyectos/paleteria-nopalucna/",
+    name: "Paletería Nopalucan",
+    slug: "paleteria-nopalucan",
+    href: "/proyectos/paleteria-nopalucan/",
     summary: "Cliente con soluciones digitales para operación de ventas y presencia web.",
     projects: [
       {
