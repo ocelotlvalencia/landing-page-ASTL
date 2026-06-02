@@ -11,6 +11,8 @@ const client = clients.find((item) => item.slug === "paleteria-nopalucan");
 const pvScreens = [
   [productosTicket, "Productos y ticket"]
 ];
+const previewPvScreens = pvScreens.length > 1 ? [...pvScreens, ...pvScreens] : pvScreens;
+const pvStatusLabel = pvScreens.length === 1 ? "1 vista" : `${pvScreens.length} vistas`;
 ---
 
 <BaseLayout title={`${client.name} | Proyectos ASTL`}>
@@ -34,7 +36,7 @@ const pvScreens = [
           </div>
         </div>
         <p class="text-lg leading-8 text-white/62">
-          Carpeta del cliente con los trabajos realizados y entregados por ASTL Technology Consulting.
+          Registro de soluciones desarrolladas para fortalecer la operación comercial y la presencia digital del negocio.
         </p>
       </div>
 
@@ -46,12 +48,12 @@ const pvScreens = [
                 preview_pv
               </div>
               <span class="code-font rounded-full bg-brass/10 px-3 py-1 text-xs font-bold text-brass">
-                {pvScreens.length} vistas
+                {pvStatusLabel}
               </span>
             </div>
             <h2 class="mt-5 text-2xl font-extrabold">Punto de venta a la medida</h2>
             <p class="mt-3 leading-7 text-white/62">
-              Vista rápida del flujo de venta con productos y ticket.
+              Sistema orientado al registro de ventas, selección de productos y generación de ticket dentro de un flujo de atención claro.
             </p>
           </div>
 
@@ -60,8 +62,8 @@ const pvScreens = [
               <span class="code-font text-xs font-bold text-teal">assets-pv.running</span>
               <span class="code-font text-xs font-bold text-brass">entregado</span>
             </div>
-            <div class="pv-track pt-14">
-              {[...pvScreens, ...pvScreens].map(([screen, label]) => (
+            <div class={`pv-track pt-14 ${pvScreens.length === 1 ? "pv-track-static" : ""}`}>
+              {previewPvScreens.map(([screen, label]) => (
                 <figure class="mb-4 overflow-hidden rounded-2xl border border-teal/14 bg-ink shadow-soft">
                   <img
                     src={screen.src}
@@ -92,14 +94,14 @@ const pvScreens = [
             </div>
             <h2 class="mt-5 text-2xl font-extrabold">Página web</h2>
             <p class="mt-3 leading-7 text-white/62">
-              Espacio reservado para mostrar la vista rápida de la página web cuando se agreguen sus imágenes.
+              Sitio creado para presentar la identidad del negocio, sus productos y canales de contacto en una experiencia web directa.
             </p>
           </div>
 
           <div class="relative flex h-[380px] items-center justify-center overflow-hidden bg-white/[0.03] p-4 md:h-[430px]">
             <div class="w-full max-w-md rounded-2xl border border-dashed border-teal/28 bg-ink/70 p-6 text-center">
               <div class="code-font mx-auto inline-flex rounded-full border border-teal/20 bg-teal/8 px-3 py-1 text-xs font-bold text-teal">
-                assets-web.empty
+                preview en preparación
               </div>
               <div class="mt-6 space-y-3">
                 <div class="mx-auto h-3 w-3/4 rounded-full bg-teal/18"></div>
@@ -107,7 +109,7 @@ const pvScreens = [
                 <div class="mx-auto h-28 w-full rounded-2xl border border-teal/12 bg-white/[0.04]"></div>
               </div>
               <p class="mt-6 text-sm leading-6 text-white/54">
-                Cuando subas las capturas de la web, este bloque quedará con el mismo estilo de preview.
+                La galería visual de este proyecto se mostrará en este espacio cuando el material esté integrado.
               </p>
             </div>
           </div>
@@ -133,6 +135,14 @@ const pvScreens = [
 
   .pv-track {
     animation: pv-scroll 32s linear infinite;
+  }
+
+  .pv-track-static {
+    animation: none;
+  }
+
+  .pv-track-static figure {
+    margin-bottom: 0;
   }
 
   .pv-showcase:hover .pv-track {

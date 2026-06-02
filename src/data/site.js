@@ -199,17 +199,17 @@ export const clients = [
     name: "Paletería Nopalucan",
     slug: "paleteria-nopalucan",
     href: "/proyectos/paleteria-nopalucan/",
-    summary: "Cliente con soluciones digitales para operación de ventas y presencia web.",
+    summary: "Soluciones digitales enfocadas en la operación de ventas y la presentación pública del negocio.",
     projects: [
       {
         code: "case_01",
         title: "Punto de venta a la medida",
-        text: "Sistema desarrollado para apoyar la operación de venta, registro y control del negocio."
+        text: "Sistema desarrollado para registrar ventas, organizar productos y facilitar el control de la operación diaria."
       },
       {
         code: "case_02",
         title: "Página web",
-        text: "Sitio web creado para presentar el negocio, sus productos y sus canales de contacto."
+        text: "Sitio web creado para presentar la identidad del negocio, sus productos y sus canales de contacto."
       }
     ]
   }
