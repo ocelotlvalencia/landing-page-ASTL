@@ -1,5 +1,5 @@
 ---
-import { CheckCircle2, Sparkles } from "@lucide/astro";
+import { CheckCircle2, Mail, Sparkles } from "@lucide/astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 import SiteFooter from "../components/SiteFooter.astro";
@@ -26,7 +26,7 @@ import { contactLinks } from "../data/site.js";
           <span class="code-font font-bold">consulta.ready</span>
         </div>
         <div class="mt-6 space-y-3 rounded-2xl border border-teal/14 bg-ink/45 p-4">
-          <p class="code-font text-sm text-white/72">email: astlteccons@gmail.com</p>
+          <p class="code-font text-sm text-white/72">respuesta: asesoría inicial</p>
           <p class="code-font text-sm text-white/72">horario: lunes a sábado, 9:00 - 5:30</p>
           <p class="code-font text-sm text-white/72">modalidad: en línea + presencial</p>
         </div>
@@ -38,12 +38,7 @@ import { contactLinks } from "../data/site.js";
         </a>
         <div class="mt-4 grid gap-3 sm:grid-cols-3">
           <a href={contactLinks.email} class="code-font inline-flex items-center justify-center gap-2 rounded-full border border-teal/25 bg-white/[0.04] px-5 py-3 font-bold text-teal transition hover:bg-teal/10">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="#EA4335" d="M12 13.2 3 6.75V18a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 18V6.75l-9 6.45Z"></path>
-              <path fill="#FBBC04" d="M21 6.75V6a1.5 1.5 0 0 0-2.4-1.2L12 9.6l9 6.45v-9.3Z"></path>
-              <path fill="#34A853" d="M3 6.75V16.05L12 9.6 5.4 4.8A1.5 1.5 0 0 0 3 6Z"></path>
-              <path fill="#4285F4" d="m12 13.2 6.6-4.8V4.8L12 9.6 5.4 4.8v3.6l6.6 4.8Z"></path>
-            </svg>
+            <Mail class="h-5 w-5 shrink-0" aria-hidden="true" />
             Correo
           </a>
           <a href={contactLinks.facebook} target="_blank" rel="noopener noreferrer" class="code-font inline-flex items-center justify-center gap-2 rounded-full border border-teal/25 bg-white/[0.04] px-5 py-3 font-bold text-teal transition hover:bg-teal/10">
