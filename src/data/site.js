@@ -136,10 +136,10 @@ export const processSteps = [
 ];
 
 export const faqs = [
-  ["¿Atienden de forma remota?", "Sí. Muchos servicios pueden resolverse por soporte remoto; si el caso lo requiere, se acuerda una visita o instalación específica."],
-  ["¿Pueden hacer un punto de venta a la medida?", "Sí. Se revisa cómo opera el negocio y se propone una solución sencilla, útil y alineada a tus procesos."],
-  ["¿También dan mantenimiento a equipos?", "Sí. Se puede revisar rendimiento, errores comunes, instalación de software, formateo y optimización."],
-  ["¿Tienen oficina física?", "Por el momento la atención es en línea y presencial según el servicio, pero sin ubicación de oficina abierta al público."],
-  ["¿Cuál es el horario de atención?", "El horario de atención es de lunes a sábado, de 9:00 a 5:30."],
-  ["¿La página ya puede publicarse en Vercel?", "Sí. El proyecto está creado en Astro y se puede preparar para subirlo a Vercel cuando tengas repositorio o cuenta lista."]
+  ["¿Cómo saber si un negocio necesita digitalizarse?", "Cuando las ventas, inventarios, clientes o reportes se llevan en libretas, archivos sueltos o procesos difíciles de revisar, una herramienta digital puede ayudar a trabajar con más orden."],
+  ["¿Qué solución conviene si el negocio vende productos todos los días?", "Normalmente se revisa si hace falta un punto de venta, control de inventario, registro de clientes o reportes de venta. La solución depende del flujo real del negocio."],
+  ["¿Una página web ayuda aunque el negocio ya tenga redes sociales?", "Sí. Una página web funciona como un punto fijo de información: presenta productos, servicios, horarios, ubicación o canales de contacto sin depender solo de publicaciones."],
+  ["¿Qué pasa si el negocio todavía no sabe qué herramienta necesita?", "Se puede empezar con una asesoría para identificar problemas, prioridades y presupuesto. La idea es proponer una solución útil, no agregar tecnología innecesaria."],
+  ["¿Se puede mejorar un proceso sin cambiar todo el sistema del negocio?", "Sí. Muchas mejoras empiezan con ajustes pequeños: respaldos, organización de archivos, instalación de herramientas, formularios, reportes o una app sencilla para una tarea específica."],
+  ["¿Por qué son importantes los respaldos de información?", "Porque reducen el riesgo de perder datos por fallas del equipo, errores, virus o daño físico. Un respaldo bien organizado ayuda a recuperar información y continuar la operación."]
 ];
