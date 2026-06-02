@@ -25,17 +25,14 @@ import { contactLinks } from "../data/site.js";
           <CheckCircle2 size={22} aria-hidden="true" />
           <span class="code-font font-bold">consulta.ready</span>
         </div>
-        <div class="mt-6 space-y-3 rounded-2xl border border-teal/14 bg-ink/45 p-4">
-          <p class="code-font text-sm text-white/72">horario: lunes a sábado, 9:00 - 5:30</p>
-        </div>
-        <div class="mt-6 grid gap-3 sm:grid-cols-4">
-          <a href={contactLinks.whatsapp} target="_blank" rel="noopener noreferrer" class="code-font inline-flex items-center justify-center gap-2 rounded-full border border-teal/25 bg-white/[0.04] px-5 py-3 font-bold text-teal transition hover:bg-teal/10">
+        <div class="mt-7 grid gap-4 sm:grid-cols-2">
+          <a href={contactLinks.whatsapp} target="_blank" rel="noopener noreferrer" class="code-font inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-teal/25 bg-white/[0.04] px-6 py-4 font-bold text-teal transition hover:bg-teal/10">
             <svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true" fill="#25D366">
               <path d="M12.04 2a9.86 9.86 0 0 0-8.42 14.99L2.5 22l5.16-1.08A9.86 9.86 0 1 0 12.04 2Zm0 1.9a7.96 7.96 0 0 1 6.75 12.18 7.95 7.95 0 0 1-10.78 2.83l-.34-.2-2.72.57.59-2.64-.23-.36A7.96 7.96 0 0 1 12.04 3.9Zm-3.3 3.93c-.17 0-.45.06-.69.33-.24.26-.9.88-.9 2.15s.92 2.5 1.05 2.67c.13.17 1.79 2.86 4.48 3.9 2.24.88 2.69.7 3.17.66.49-.04 1.57-.64 1.79-1.26.22-.62.22-1.15.15-1.26-.07-.11-.24-.17-.51-.31-.26-.13-1.57-.78-1.81-.86-.24-.09-.42-.13-.6.13-.17.26-.68.86-.83 1.03-.15.18-.31.2-.57.07-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.47-1.82-.15-.27-.02-.41.12-.54.12-.12.26-.31.4-.46.13-.16.17-.27.26-.44.09-.18.04-.33-.02-.46-.07-.13-.6-1.45-.82-1.98-.21-.5-.43-.43-.6-.44h-.5Z"></path>
             </svg>
             WhatsApp
           </a>
-          <a href={contactLinks.email} class="code-font inline-flex items-center justify-center gap-2 rounded-full border border-teal/25 bg-white/[0.04] px-5 py-3 font-bold text-teal transition hover:bg-teal/10">
+          <a href={contactLinks.email} class="code-font inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-teal/25 bg-white/[0.04] px-6 py-4 font-bold text-teal transition hover:bg-teal/10">
             <svg class="h-5 w-5 shrink-0 overflow-visible" viewBox="0 0 24 24" aria-hidden="true">
               <path fill="#EA4335" d="M4.5 19.5h3V10.7L3 7.32V18a1.5 1.5 0 0 0 1.5 1.5Z"></path>
               <path fill="#34A853" d="M16.5 19.5h3A1.5 1.5 0 0 0 21 18V7.32l-4.5 3.38v8.8Z"></path>
@@ -45,14 +42,14 @@ import { contactLinks } from "../data/site.js";
             </svg>
             Correo
           </a>
-          <a href={contactLinks.facebook} target="_blank" rel="noopener noreferrer" class="code-font inline-flex items-center justify-center gap-2 rounded-full border border-teal/25 bg-white/[0.04] px-5 py-3 font-bold text-teal transition hover:bg-teal/10">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true" fill="#1877F2">
+          <a href={contactLinks.facebook} target="_blank" rel="noopener noreferrer" class="code-font inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-teal/25 bg-white/[0.04] px-6 py-4 font-bold text-teal transition hover:bg-teal/10">
+            <svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true" fill="#1877F2">
               <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.438H7.078v-3.49h3.047V9.414c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.49 0-1.956.93-1.956 1.887v2.263h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073Z"></path>
             </svg>
             Facebook
           </a>
-          <a href={contactLinks.instagram} target="_blank" rel="noopener noreferrer" class="code-font inline-flex items-center justify-center gap-2 rounded-full border border-teal/25 bg-white/[0.04] px-5 py-3 font-bold text-teal transition hover:bg-teal/10">
-            <svg class="h-5 w-5" viewBox="0 0 24 24" aria-hidden="true">
+          <a href={contactLinks.instagram} target="_blank" rel="noopener noreferrer" class="code-font inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-teal/25 bg-white/[0.04] px-6 py-4 font-bold text-teal transition hover:bg-teal/10">
+            <svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <defs>
                 <linearGradient id="instagram-gradient" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
                   <stop stop-color="#FEDA75"></stop>
