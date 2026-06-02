@@ -4,7 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import SiteHeader from "../components/SiteHeader.astro";
-import { metrics, terminalLines } from "../data/site.js";
+import { terminalLines } from "../data/site.js";
 ---
 
 <BaseLayout
@@ -72,17 +72,6 @@ import { metrics, terminalLines } from "../data/site.js";
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="border-y border-teal/14 bg-white/[0.03] py-8">
-      <div class="mx-auto grid max-w-7xl gap-4 px-5 md:grid-cols-3 md:px-8">
-        {metrics.map(([value, label]) => (
-          <div class="reveal rounded-[1.5rem] border border-teal/18 bg-white/[0.04] px-6 py-6 shadow-soft">
-            <strong class="code-font block text-3xl font-extrabold text-teal">{value}</strong>
-            <span class="mt-1 block text-sm font-medium text-white/68">{label}</span>
-          </div>
-        ))}
       </div>
     </section>
   </main>

@@ -151,12 +151,6 @@ export const serviceCategories = [
   }
 ];
 
-export const metrics = [
-  ["10", "líneas de servicio tecnológico"],
-  ["24/7", "mentalidad de soporte y continuidad"],
-  ["100%", "enfoque práctico para tu operación diaria"]
-];
-
 export const terminalLines = [
   "const servicio = crearSolucion('negocio');",
   "servicio.modulos.add(['ventas', 'web', 'respaldos']);",
