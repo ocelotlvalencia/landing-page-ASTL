@@ -1,13 +1,7 @@
 import {
-  Boxes,
   DatabaseBackup,
-  Download,
   Globe2,
-  Headphones,
-  Lightbulb,
   MonitorCog,
-  RefreshCcw,
-  Smartphone,
   Wrench
 } from "@lucide/astro";
 
@@ -18,59 +12,6 @@ export const contactLinks = {
   facebook: "https://www.facebook.com/share/1CHP3t4P3j/?mibextid=wwXIfr",
   instagram: "https://www.instagram.com/astlteccons?igsh=ZzA4OTBqZjRvaG1z"
 };
-
-export const services = [
-  {
-    icon: MonitorCog,
-    title: "Soluciones para operación",
-    text: "Implementamos herramientas digitales para ventas, control interno, inventarios y tareas clave del negocio."
-  },
-  {
-    icon: Globe2,
-    title: "Presencia digital",
-    text: "Desarrollamos páginas web y recursos digitales para presentar tu negocio de forma clara y profesional."
-  },
-  {
-    icon: Wrench,
-    title: "Mantenimiento y optimización",
-    text: "Mejoramos el rendimiento de equipos, corregimos fallas comunes y dejamos tu entorno de trabajo más estable."
-  },
-  {
-    icon: Headphones,
-    title: "Soporte técnico",
-    text: "Atendemos dudas, configuraciones e incidencias técnicas de forma remota o según la necesidad del proyecto."
-  },
-  {
-    icon: DatabaseBackup,
-    title: "Protección de información",
-    text: "Ayudamos a organizar respaldos, archivos y prácticas básicas para reducir riesgos de pérdida de datos."
-  },
-  {
-    icon: RefreshCcw,
-    title: "Configuración de equipos",
-    text: "Preparamos computadoras, sistemas y herramientas para que puedan usarse de forma ordenada y eficiente."
-  },
-  {
-    icon: Download,
-    title: "Herramientas de trabajo",
-    text: "Instalamos y ajustamos software necesario para ventas, administración, comunicación y productividad."
-  },
-  {
-    icon: Boxes,
-    title: "Digitalización de procesos",
-    text: "Transformamos controles manuales en registros digitales más fáciles de consultar, medir y mantener."
-  },
-  {
-    icon: Smartphone,
-    title: "Aplicaciones a la medida",
-    text: "Creamos soluciones sencillas para registrar información, automatizar tareas o resolver necesidades específicas."
-  },
-  {
-    icon: Lightbulb,
-    title: "Consultoría tecnológica",
-    text: "Te acompañamos para elegir, ordenar y aprovechar mejor la tecnología de acuerdo con tu etapa de crecimiento."
-  }
-];
 
 export const serviceCategories = [
   {
@@ -166,27 +107,6 @@ export const businessTypes = [
   ["Negocios en crecimiento", "Apps sencillas, procesos digitales y acompañamiento para escalar con orden."]
 ];
 
-export const packages = [
-  {
-    name: "Start",
-    label: "setup básico",
-    description: "Para negocios que necesitan ordenar lo básico: revisar equipos, resolver dudas técnicas y definir una ruta antes de invertir.",
-    items: ["Asesoría inicial", "Revisión de equipos", "Configuración esencial", "Ruta tecnológica", "Recomendaciones de mejora"]
-  },
-  {
-    name: "Business",
-    label: "operación digital",
-    description: "Para negocios que quieren trabajar mejor con herramientas digitales, presencia web, respaldos y soporte técnico.",
-    items: ["Página web", "Soporte técnico", "Respaldos", "Inventarios o punto de venta", "Acompañamiento de implementación"]
-  },
-  {
-    name: "Custom",
-    label: "a la medida",
-    description: "Para necesidades específicas: sistemas sencillos, apps internas, automatización o una solución ajustada al flujo real del negocio.",
-    items: ["App sencilla", "Automatización", "Integración de procesos", "Acompañamiento técnico", "Solución personalizada"]
-  }
-];
-
 export const clients = [
   {
     code: "client_01",
@@ -208,10 +128,6 @@ export const clients = [
     ]
   }
 ];
-
-export const projects = clients.flatMap((client) =>
-  client.projects.map((project) => [project.code, `${project.title} para ${client.name}`, project.text])
-);
 
 export const processSteps = [
   "Escuchamos cómo trabaja tu negocio y detectamos qué puede resolverse con tecnología.",
