@@ -60,65 +60,80 @@ const pvScreens = [
         </p>
       </div>
 
-      <div class="reveal mt-12 overflow-hidden rounded-[1.75rem] border border-teal/16 bg-ink/65 shadow-soft">
-        <div class="grid gap-0 lg:grid-cols-[0.42fr_0.58fr]">
-          <div class="border-b border-teal/12 p-7 lg:border-b-0 lg:border-r">
-            <div class="code-font inline-flex rounded-full border border-teal/20 bg-teal/8 px-3 py-1 text-xs font-bold text-teal">
-              preview_pv
+      <div class="mt-12 grid gap-5 lg:grid-cols-2">
+        <article class="reveal overflow-hidden rounded-[1.75rem] border border-teal/16 bg-ink/65 shadow-soft">
+          <div class="border-b border-teal/12 p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="code-font inline-flex rounded-full border border-teal/20 bg-teal/8 px-3 py-1 text-xs font-bold text-teal">
+                preview_pv
+              </div>
+              <span class="code-font rounded-full bg-brass/10 px-3 py-1 text-xs font-bold text-brass">
+                {pvScreens.length} vistas
+              </span>
             </div>
-            <h2 class="mt-6 text-3xl font-extrabold">Punto de venta a la medida</h2>
-            <p class="mt-4 leading-7 text-white/62">
-              Vista rápida de las pantallas principales: productos, clientes, pedidos, ventas, corte de caja, proveedores y configuración.
+            <h2 class="mt-5 text-2xl font-extrabold">Punto de venta a la medida</h2>
+            <p class="mt-3 leading-7 text-white/62">
+              Vista rápida de productos, clientes, pedidos, ventas, corte de caja, proveedores y configuración.
             </p>
-            <div class="mt-7 grid grid-cols-2 gap-3">
-              {["Ventas", "Pedidos", "Clientes", "Caja"].map((module) => (
-                <div class="rounded-2xl border border-teal/12 bg-white/[0.04] px-4 py-3">
-                  <p class="code-font text-xs font-bold uppercase text-brass">{module}</p>
-                  <p class="mt-1 text-sm text-white/54">módulo activo</p>
-                </div>
-              ))}
-            </div>
           </div>
 
-          <div class="pv-showcase relative h-[560px] overflow-hidden bg-white/[0.03] p-5 md:h-[620px]">
-            <div class="absolute left-5 right-5 top-5 z-10 flex items-center justify-between rounded-2xl border border-teal/12 bg-ink/86 px-4 py-3 backdrop-blur">
+          <div class="pv-showcase relative h-[380px] overflow-hidden bg-white/[0.03] p-4 md:h-[430px]">
+            <div class="absolute left-4 right-4 top-4 z-10 flex items-center justify-between rounded-2xl border border-teal/12 bg-ink/86 px-4 py-3 backdrop-blur">
               <span class="code-font text-xs font-bold text-teal">assets-pv.running</span>
-              <span class="code-font text-xs font-bold text-brass">{pvScreens.length} vistas</span>
+              <span class="code-font text-xs font-bold text-brass">entregado</span>
             </div>
-            <div class="pv-track pt-16">
+            <div class="pv-track pt-14">
               {[...pvScreens, ...pvScreens].map(([screen, label]) => (
-                <figure class="mb-5 overflow-hidden rounded-2xl border border-teal/14 bg-ink shadow-soft">
+                <figure class="mb-4 overflow-hidden rounded-2xl border border-teal/14 bg-ink shadow-soft">
                   <img
                     src={screen.src}
                     width={screen.width}
                     height={screen.height}
                     alt={`Pantalla del punto de venta: ${label}`}
-                    class="aspect-[16/10] w-full object-cover object-top"
+                    class="aspect-[16/9] w-full object-cover object-top"
                     loading="lazy"
                   />
-                  <figcaption class="border-t border-teal/12 px-4 py-3 text-sm font-semibold text-white/72">
+                  <figcaption class="border-t border-teal/12 px-4 py-2 text-sm font-semibold text-white/72">
                     {label}
                   </figcaption>
                 </figure>
               ))}
             </div>
           </div>
-        </div>
-      </div>
+        </article>
 
-      <div class="mt-12 grid gap-5 md:grid-cols-2">
-        {client.projects.map((project, index) => (
-          <article class="reveal rounded-[1.75rem] border border-teal/16 bg-ink/65 p-7 shadow-soft">
-            <div class="code-font inline-flex rounded-full border border-teal/20 bg-teal/8 px-3 py-1 text-xs font-bold text-teal">
-              {project.code}
+        <article class="reveal overflow-hidden rounded-[1.75rem] border border-teal/16 bg-ink/65 shadow-soft">
+          <div class="border-b border-teal/12 p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div class="code-font inline-flex rounded-full border border-teal/20 bg-teal/8 px-3 py-1 text-xs font-bold text-teal">
+                preview_web
+              </div>
+              <span class="code-font rounded-full bg-brass/10 px-3 py-1 text-xs font-bold text-brass">
+                pendiente
+              </span>
             </div>
-            <h2 class="mt-6 text-2xl font-extrabold">{project.title}</h2>
-            <p class="mt-3 leading-7 text-white/62">{project.text}</p>
-            <p class="code-font mt-6 text-sm text-brass">
-              {index === 0 ? "status: entregado / visual disponible" : "status: entregado / visual pendiente"}
+            <h2 class="mt-5 text-2xl font-extrabold">Página web</h2>
+            <p class="mt-3 leading-7 text-white/62">
+              Espacio reservado para mostrar la vista rápida de la página web cuando se agreguen sus imágenes.
             </p>
-          </article>
-        ))}
+          </div>
+
+          <div class="relative flex h-[380px] items-center justify-center overflow-hidden bg-white/[0.03] p-4 md:h-[430px]">
+            <div class="w-full max-w-md rounded-2xl border border-dashed border-teal/28 bg-ink/70 p-6 text-center">
+              <div class="code-font mx-auto inline-flex rounded-full border border-teal/20 bg-teal/8 px-3 py-1 text-xs font-bold text-teal">
+                assets-web.empty
+              </div>
+              <div class="mt-6 space-y-3">
+                <div class="mx-auto h-3 w-3/4 rounded-full bg-teal/18"></div>
+                <div class="mx-auto h-3 w-1/2 rounded-full bg-brass/18"></div>
+                <div class="mx-auto h-28 w-full rounded-2xl border border-teal/12 bg-white/[0.04]"></div>
+              </div>
+              <p class="mt-6 text-sm leading-6 text-white/54">
+                Cuando subas las capturas de la web, este bloque quedará con el mismo estilo de preview.
+              </p>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
   </main>
@@ -132,14 +147,14 @@ const pvScreens = [
     right: 0;
     bottom: 0;
     left: 0;
-    height: 120px;
+    height: 90px;
     background: linear-gradient(180deg, rgba(5, 7, 12, 0), #05070c 86%);
     content: "";
     pointer-events: none;
   }
 
   .pv-track {
-    animation: pv-scroll 34s linear infinite;
+    animation: pv-scroll 32s linear infinite;
   }
 
   .pv-showcase:hover .pv-track {
